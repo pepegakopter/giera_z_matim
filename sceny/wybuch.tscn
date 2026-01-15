@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=3 uid="uid://ckoytfnhwqtko"]
+
+[ext_resource type="Script" uid="uid://bbk8fantxrg1i" path="res://kodik/wybuch.gd" id="1_3c2h0"]
+
+[sub_resource type="Curve" id="Curve_gdtp8"]
+_data = [Vector2(0, 0.9896), 0.0, 0.0, 0, 0, Vector2(0.8816794, 0.56320006), -2.8295991, 0.0, 0, 0]
+point_count = 2
+
+[node name="wybuch" type="Node2D"]
+script = ExtResource("1_3c2h0")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+emitting = false
+amount = 15
+lifetime = 0.14
+one_shot = true
+speed_scale = 0.65
+explosiveness = 1.0
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 189.2
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_gdtp8")
+color = Color(0.4862745, 0, 0, 1)

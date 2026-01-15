@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwo5cp6wm0ctl"]
+
+[ext_resource type="Texture2D" uid="uid://cdhw74bvncc8p" path="res://assety/img/pocisk_better.png" id="1_aqgom"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_aqgom"]
+radius = 3.0
+
+[sub_resource type="Curve" id="Curve_dhevx"]
+_data = [Vector2(0, 0.9896), 0.0, 0.0, 0, 0, Vector2(0.870229, 0.09520006), -0.279467, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_aqgom"]
+_limits = [-1.0, 1.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.89312977, -0.5733738), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[node name="elozelo" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_aqgom")
+
+[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
+texture = ExtResource("1_aqgom")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="CollisionShape2D"]
+amount = 15
+lifetime = 0.14
+speed_scale = 0.65
+explosiveness = 0.41
+direction = Vector2(0, 0)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 189.2
+scale_amount_min = 2.0
+scale_amount_max = 4.0
+scale_amount_curve = SubResource("Curve_dhevx")
+color = Color(0.4862745, 0, 0, 1)
+hue_variation_min = -0.07
+hue_variation_max = 0.23
+hue_variation_curve = SubResource("Curve_aqgom")

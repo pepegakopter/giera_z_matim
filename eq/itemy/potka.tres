@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://0oyby1444lo6"]
+
+[ext_resource type="Script" uid="uid://buxbpwd1kxeyn" path="res://eq/inventory_item.gd" id="1_7poml"]
+[ext_resource type="Texture2D" uid="uid://c1fw25v8i05jw" path="res://assety/img/potka_hp.png" id="2_oyeob"]
+
+[resource]
+script = ExtResource("1_7poml")
+name = "hp_potka"
+texture = ExtResource("2_oyeob")
+metadata/_custom_type_script = "uid://buxbpwd1kxeyn"

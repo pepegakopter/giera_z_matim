@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ctqwixqa701qy"]
+
+[ext_resource type="Texture2D" uid="uid://bcikw2hpm3fij" path="res://assety/img/place_holder_enem.png" id="1_hv8m0"]
+[ext_resource type="Script" uid="uid://c3yf52j3ep6ta" path="res://kodik/pickup_test.gd" id="1_k72td"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hv8m0"]
+radius = 26.0
+
+[node name="pickup_test" type="Node2D"]
+script = ExtResource("1_k72td")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(4.7683716e-07, 0)
+scale = Vector2(1.6874999, 1.7500001)
+texture = ExtResource("1_hv8m0")
+
+[node name="pickup_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="pickup_area"]
+shape = SubResource("CircleShape2D_hv8m0")
+
+[connection signal="area_entered" from="pickup_area" to="." method="_on_pickup_area_area_entered"]

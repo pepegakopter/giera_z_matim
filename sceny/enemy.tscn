@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://blxcsh8u3hlsl"]
+
+[ext_resource type="Texture2D" uid="uid://bcikw2hpm3fij" path="res://assety/img/place_holder_enem.png" id="1_kha5q"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfh58"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_gfh58")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.3841858e-07, 1.5)
+scale = Vector2(1.75, 1.9375)
+texture = ExtResource("1_kha5q")
