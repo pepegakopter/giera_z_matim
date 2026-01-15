@@ -1,0 +1,108 @@
+[gd_scene load_steps=12 format=3 uid="uid://cqtpo01djkans"]
+
+[ext_resource type="Script" uid="uid://dme8u8aewmv21" path="res://kodik/hud.gd" id="1_8sq4i"]
+[ext_resource type="Texture2D" uid="uid://bulrpyobi1w6k" path="res://assety/img/serceTest2_8x8.png" id="1_64ctp"]
+[ext_resource type="PackedScene" uid="uid://clddm52o2ijc1" path="res://sceny/pause_menu.tscn" id="2_gpiub"]
+[ext_resource type="Texture2D" uid="uid://cu7xbcj1tr7oh" path="res://assety/img/serceCracked_8x8.png" id="3_1xsix"]
+[ext_resource type="Texture2D" uid="uid://bv562dra6wvd8" path="res://assety/img/serceCracking1_8x8.png" id="3_a2258"]
+[ext_resource type="Texture2D" uid="uid://cewfpjmt83hko" path="res://assety/img/serceCracking2_8x8.png" id="4_1xsix"]
+[ext_resource type="Texture2D" uid="uid://dfco1v1w2lfvs" path="res://assety/img/serceCracking3_8x8.png" id="5_rftc2"]
+[ext_resource type="Script" path="res://kodik/serce_1.gd" id="7_rftc2"]
+[ext_resource type="Script" path="res://kodik/serce_2.gd" id="8_61f8s"]
+[ext_resource type="Script" path="res://kodik/serce_3.gd" id="9_g10ll"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_61f8s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1xsix")
+}],
+"loop": true,
+"name": &"cracked",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_1xsix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a2258")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1xsix")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rftc2")
+}],
+"loop": false,
+"name": &"default",
+"speed": 15.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_rftc2")
+}],
+"loop": true,
+"name": &"empty",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_64ctp")
+}],
+"loop": true,
+"name": &"full",
+"speed": 10.0
+}]
+
+[node name="hud" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 405.0
+offset_bottom = 250.0
+scale = Vector2(0.7, 0.7)
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource("1_8sq4i")
+
+[node name="PauseMenu" parent="." instance=ExtResource("2_gpiub")]
+auto_translate_mode = 1
+layout_mode = 1
+offset_top = -65.0
+offset_bottom = -65.0
+
+[node name="serce1" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(34.285717, 30.000004)
+scale = Vector2(5.124941, 5.124941)
+sprite_frames = SubResource("SpriteFrames_61f8s")
+speed_scale = 1.5
+script = ExtResource("7_rftc2")
+metadata/_edit_group_ = true
+
+[node name="serce2" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(67.14285, 52.857136)
+scale = Vector2(5.124941, 5.124941)
+sprite_frames = SubResource("SpriteFrames_61f8s")
+speed_scale = 1.5
+script = ExtResource("8_61f8s")
+metadata/_edit_group_ = true
+
+[node name="serce3" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(99.999985, 30.000002)
+scale = Vector2(5.124941, 5.124941)
+sprite_frames = SubResource("SpriteFrames_61f8s")
+speed_scale = 1.5
+script = ExtResource("9_g10ll")
+metadata/_edit_group_ = true
+
+[node name="serce4" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(132.85715, 52.857143)
+scale = Vector2(5.124941, 5.124941)
+sprite_frames = SubResource("SpriteFrames_61f8s")
+speed_scale = 1.5
+script = ExtResource("9_g10ll")
+metadata/_edit_group_ = true

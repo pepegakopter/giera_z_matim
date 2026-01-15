@@ -1,0 +1,131 @@
+[gd_scene load_steps=6 format=3 uid="uid://clddm52o2ijc1"]
+
+[ext_resource type="Script" uid="uid://duawlkkvpuou2" path="res://kodik/pause_menu.gd" id="1_hdmo1"]
+[ext_resource type="Shader" path="res://kodik/pause_menu.gdshader" id="2_nwcfo"]
+[ext_resource type="Texture2D" uid="uid://boprchl1f7e31" path="res://assety/img/kartka_2test.png" id="3_05uyy"]
+[ext_resource type="FontFile" uid="uid://cr67o6177xope" path="res://PixelifySans-VariableFont_wght.ttf" id="4_p81d2"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_05uyy"]
+shader = ExtResource("2_nwcfo")
+shader_parameter/amount = 1.034000049115
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+script = ExtResource("1_hdmo1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_05uyy")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2655.0
+offset_top = -1572.5
+offset_right = 2655.0
+offset_bottom = 1572.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 496.0
+offset_bottom = 541.091
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_05uyy")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 66.0
+offset_top = 62.0
+offset_right = 310.0
+offset_bottom = 347.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.20871013, 0.20871016, 0.20871013, 1)
+theme_override_fonts/font = ExtResource("4_p81d2")
+theme_override_font_sizes/font_size = 70
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="Resume" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.32915837, 0.3291584, 0.3291584, 1)
+theme_override_colors/font_focus_color = Color(0.4117647, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.41032708, 5.8358535e-07, 1.4439226e-07, 1)
+theme_override_fonts/font = ExtResource("4_p81d2")
+theme_override_font_sizes/font_size = 31
+text = "RESUME"
+flat = true
+
+[node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.32915837, 0.3291584, 0.3291584, 1)
+theme_override_colors/font_focus_color = Color(0.4117647, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.41032708, 5.8358535e-07, 1.4439226e-07, 1)
+theme_override_fonts/font = ExtResource("4_p81d2")
+theme_override_font_sizes/font_size = 31
+text = "SETTINGS"
+flat = true
+
+[node name="Back to menu" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.32915837, 0.3291584, 0.3291584, 1)
+theme_override_colors/font_focus_color = Color(0.4117647, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.41032708, 5.8358535e-07, 1.4439226e-07, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("4_p81d2")
+theme_override_font_sizes/font_size = 31
+text = "BACK TO MENU"
+flat = true
+
+[node name="Quit" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.32915837, 0.3291584, 0.3291584, 1)
+theme_override_colors/font_focus_color = Color(0.4117647, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.41032708, 5.8358535e-07, 1.4439226e-07, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 0)
+theme_override_fonts/font = ExtResource("4_p81d2")
+theme_override_font_sizes/font_size = 31
+text = "QUIT"
+flat = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Settings" to="." method="_on_settings_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Back to menu" to="." method="_on_back_to_menu_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Quit" to="." method="_on_quit_pressed"]
