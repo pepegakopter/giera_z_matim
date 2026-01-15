@@ -1,0 +1,90 @@
+[gd_scene load_steps=4 format=3 uid="uid://cu82grqwb5jwd"]
+
+[ext_resource type="Script" path="res://kodik/settings.gd" id="1_x2hje"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_x2hje"]
+keycode = 4194305
+
+[sub_resource type="Shortcut" id="Shortcut_nkug2"]
+events = [SubResource("InputEventKey_x2hje")]
+
+[node name="Settings" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x2hje")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GoBack" type="Button" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+shortcut = SubResource("Shortcut_nkug2")
+text = "<"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="volume_label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "Volume"
+
+[node name="VolumeNumber" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+horizontal_alignment = 2
+
+[node name="volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="window_mode" type="Label" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Window mode"
+
+[node name="window" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+selected = 0
+item_count = 3
+popup/item_0/text = "Borderless Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+popup/item_2/text = "Windowed"
+popup/item_2/id = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+
+[node name="CRT_label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 2
+text = "CRT Effect"
+horizontal_alignment = 2
+
+[node name="toggleCRT" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+button_pressed = true
+
+[connection signal="pressed" from="MarginContainer/GoBack" to="." method="_on_go_back_pressed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/volume" to="." method="_on_volume_value_changed"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/window" to="." method="_on_window_item_selected"]
