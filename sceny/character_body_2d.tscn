@@ -1,0 +1,40 @@
+[gd_scene load_steps=5 format=3 uid="uid://mtka4yr4uhqk"]
+
+[ext_resource type="Texture2D" uid="uid://lnnwcuy5fc8x" path="res://test.png" id="1_f50pn"]
+[ext_resource type="PackedScene" uid="uid://cqtpo01djkans" path="res://hud.tscn" id="2_ij6vw"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ij6vw"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ghijl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_f50pn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+slide_on_ceiling = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="hud" parent="CanvasLayer" instance=ExtResource("2_ij6vw")]
+z_index = 99
+y_sort_enabled = true
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 3.0
+offset_bottom = 2.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position_smoothing_enabled = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ij6vw")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+sprite_frames = SubResource("SpriteFrames_ghijl")

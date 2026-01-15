@@ -1,0 +1,84 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsf4v2pwe14fw"]
+
+[ext_resource type="Script" uid="uid://gg4ffp4toiqs" path="res://kodik/menu.gd" id="1_yk7ch"]
+[ext_resource type="Texture2D" uid="uid://vf8nxqhnsfnv" path="res://assety/img/placeholder.png" id="2_mae5d"]
+[ext_resource type="FontFile" uid="uid://cr67o6177xope" path="res://PixelifySans-VariableFont_wght.ttf" id="3_suby5"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yk7ch")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Tło" type="TextureRect" parent="CanvasLayer"]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_mae5d")
+expand_mode = 2
+
+[node name="[Nazwa gry]" type="Label" parent="CanvasLayer"]
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 110.0
+offset_bottom = 433.0
+grow_horizontal = 2
+theme_override_fonts/font = ExtResource("3_suby5")
+theme_override_font_sizes/font_size = 150
+text = "[Nazwa gry]"
+vertical_alignment = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer"]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 96.0
+offset_top = 4.0
+offset_right = 384.0
+offset_bottom = 156.0
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+alignment = 1
+
+[node name="Button" type="Button" parent="CanvasLayer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(0.4117647, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.4117647, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_suby5")
+theme_override_font_sizes/font_size = 32
+text = "START"
+flat = true
+
+[node name="Button2" type="Button" parent="CanvasLayer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(0.4117647, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.4117647, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_suby5")
+theme_override_font_sizes/font_size = 32
+text = "SETTINGS"
+flat = true
+
+[node name="Button3" type="Button" parent="CanvasLayer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_focus_color = Color(0.4117647, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0.4117647, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_suby5")
+theme_override_font_sizes/font_size = 32
+text = "QUIT"
+flat = true
+
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button" to="CanvasLayer/VBoxContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/VBoxContainer/Button3" to="." method="_on_button_3_pressed"]
