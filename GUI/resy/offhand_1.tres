@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://c7d1jdsnm5uhc"]
+
+[ext_resource type="Texture2D" uid="uid://bcikw2hpm3fij" path="res://assety/img/place_holder_enem.png" id="1_g8ns5"]
+[ext_resource type="Script" uid="uid://0qu2urbkmyxy" path="res://GUI/eq/item_data.gd" id="2_7na4c"]
+
+[resource]
+script = ExtResource("2_7na4c")
+type = 5
+item_name = "jakis offhand"
+item_damage = 1
+item_defense = 5
+item_description = "elo zelo"
+item_texture = ExtResource("1_g8ns5")

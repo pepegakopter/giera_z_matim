@@ -1,10 +1,9 @@
-[gd_scene load_steps=14 format=3 uid="uid://b2awxj46dyaxv"]
+[gd_scene load_steps=13 format=3 uid="uid://b2awxj46dyaxv"]
 
 [ext_resource type="Texture2D" uid="uid://vbyawnx0xstu" path="res://assety/tilesety/postka_tile.png" id="1_2q5xm"]
 [ext_resource type="PackedScene" uid="uid://chtgmjsdiafoy" path="res://sceny/bronka.tscn" id="2_aiy01"]
 [ext_resource type="PackedScene" uid="uid://ckoytfnhwqtko" path="res://sceny/wybuch.tscn" id="3_uhbs0"]
 [ext_resource type="PackedScene" uid="uid://cpi864hr1h2i2" path="res://sceny/flash_prt.tscn" id="4_02yph"]
-[ext_resource type="PackedScene" uid="uid://b6f2inskr3m5d" path="res://eq/inv_ui.tscn" id="5_ywyx1"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2q5xm"]
 atlas = ExtResource("1_2q5xm")
@@ -96,9 +95,3 @@ position = Vector2(20, 0)
 
 [node name="flash" parent="." instance=ExtResource("4_02yph")]
 position = Vector2(0, 9)
-
-[node name="Inv_UI" parent="." instance=ExtResource("5_ywyx1")]
-offset_left = 40.0
-offset_top = -54.0
-offset_right = 173.0
-offset_bottom = 15.0

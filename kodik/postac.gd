@@ -1,8 +1,6 @@
 extends CharacterBody2D
 class_name Postka
 
-@export var inv: Inv
-
 @export var speed = 100
 @export var HP = 10
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
@@ -57,8 +55,6 @@ func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
 	velocity = input_direction * speed
 	
-func collect(item):
-	inv.insert(item)
 
 func _physics_process(delta):
 	get_input()
