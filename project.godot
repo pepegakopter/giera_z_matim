@@ -24,12 +24,8 @@ window/size/viewport_width=1920
 window/size/viewport_height=1080
 window/size/mode=3
 window/size/initial_position_type=0
-window/stretch/scale_mode="integer"
-
-[editor]
-
-version_control/plugin_name="GitPlugin"
-version_control/autoload_on_startup=true
+window/size/resizable=false
+window/stretch/mode="viewport"
 
 [input]
 
