@@ -7,9 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://bv562dra6wvd8" path="res://assety/img/serceCracking1_8x8.png" id="3_a2258"]
 [ext_resource type="Texture2D" uid="uid://cewfpjmt83hko" path="res://assety/img/serceCracking2_8x8.png" id="4_1xsix"]
 [ext_resource type="Texture2D" uid="uid://dfco1v1w2lfvs" path="res://assety/img/serceCracking3_8x8.png" id="5_rftc2"]
-[ext_resource type="Script" path="res://kodik/serce_1.gd" id="7_rftc2"]
-[ext_resource type="Script" path="res://kodik/serce_2.gd" id="8_61f8s"]
-[ext_resource type="Script" path="res://kodik/serce_3.gd" id="9_g10ll"]
+[ext_resource type="Script" uid="uid://ctulridhywxs7" path="res://kodik/serce_1.gd" id="7_rftc2"]
+[ext_resource type="Script" uid="uid://dunquxr2ht3np" path="res://kodik/serce_2.gd" id="8_61f8s"]
+[ext_resource type="Script" uid="uid://beb0phei3arnx" path="res://kodik/serce_3.gd" id="9_g10ll"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_61f8s"]
 animations = [{
@@ -57,9 +57,17 @@ animations = [{
 
 [node name="hud" type="Control"]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 405.0
-offset_bottom = 250.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -960.0
+offset_top = -540.0
+offset_right = -960.0
+offset_bottom = -540.0
+grow_horizontal = 2
+grow_vertical = 2
 scale = Vector2(0.7, 0.7)
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -68,8 +76,11 @@ script = ExtResource("1_8sq4i")
 [node name="PauseMenu" parent="." instance=ExtResource("2_gpiub")]
 auto_translate_mode = 1
 layout_mode = 1
-offset_top = -65.0
-offset_bottom = -65.0
+offset_left = -152.85715
+offset_top = -84.28571
+offset_right = -152.85715
+offset_bottom = -84.28571
+scale = Vector2(0.8, 0.8)
 
 [node name="serce1" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

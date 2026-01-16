@@ -1,6 +1,7 @@
-[gd_scene load_steps=14 format=3 uid="uid://b2awxj46dyaxv"]
+[gd_scene load_steps=15 format=3 uid="uid://b2awxj46dyaxv"]
 
 [ext_resource type="Texture2D" uid="uid://vbyawnx0xstu" path="res://assety/tilesety/postka_tile.png" id="1_2q5xm"]
+[ext_resource type="PackedScene" uid="uid://cqtpo01djkans" path="res://sceny/hud.tscn" id="2_64osm"]
 [ext_resource type="PackedScene" uid="uid://chtgmjsdiafoy" path="res://sceny/bronka.tscn" id="2_aiy01"]
 [ext_resource type="PackedScene" uid="uid://ckoytfnhwqtko" path="res://sceny/wybuch.tscn" id="3_uhbs0"]
 [ext_resource type="PackedScene" uid="uid://cpi864hr1h2i2" path="res://sceny/flash_prt.tscn" id="4_02yph"]
@@ -78,12 +79,27 @@ frame_progress = 0.4216678
 position = Vector2(1, 5)
 shape = SubResource("CapsuleShape2D_2q5xm")
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="hud" parent="CanvasLayer" instance=ExtResource("2_64osm")]
+anchors_preset = -1
+anchor_left = 0.323
+anchor_top = 0.324
+anchor_right = 0.323
+anchor_bottom = 0.324
+offset_left = -622.16003
+offset_top = -346.92
+offset_right = 621.83997
+offset_bottom = 347.08
+scale = Vector2(2, 2)
+
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(3.13, 3.13)
 limit_left = -1260
 limit_top = -960
 limit_right = 1440
 limit_bottom = 340
+position_smoothing_enabled = true
 position_smoothing_speed = 8.0
 editor_draw_limits = true
 

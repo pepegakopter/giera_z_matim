@@ -7,7 +7,7 @@ class_name Postka
 @export var HP = 10
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
-var flash_distance := 100.0
+@export var flash_distance := 100.0
 var flash_cooldown := 0.0
 var can_flash := true
 
