@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=3 format=3 uid="uid://dmmu2nc1tqkxu"]
+
+[ext_resource type="Texture2D" uid="uid://0u47f7wdxqdt" path="res://assety/img/wand.png" id="1_864qt"]
+[ext_resource type="Script" uid="uid://0qu2urbkmyxy" path="res://GUI/eq/item_data.gd" id="1_jttnj"]
+
+[resource]
+script = ExtResource("1_jttnj")
+type = 4
+item_name = "bronka"
+item_damage = 5
+item_defense = 1
+item_description = "ta rakieta"
+item_texture = ExtResource("1_864qt")

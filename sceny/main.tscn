@@ -1,15 +1,20 @@
+<<<<<<< HEAD
 [gd_scene load_steps=23 format=4 uid="uid://oqg85it3olqn"]
+=======
+<<<<<<< HEAD
+[gd_scene load_steps=20 format=4 uid="uid://oqg85it3olqn"]
+=======
+[gd_scene load_steps=24 format=4 uid="uid://oqg85it3olqn"]
+>>>>>>> 4e8a737856909f81569ce13695c13e6a59e6f195
+>>>>>>> 4f332d45f138041a7df7e8008c6c4bec0623988d
 
 [ext_resource type="PackedScene" uid="uid://b2awxj46dyaxv" path="res://sceny/postac.tscn" id="1_yvbnq"]
-[ext_resource type="Resource" uid="uid://cgdpx6nlmn8s8" path="res://eq/inv_gracz.tres" id="3_6avht"]
 [ext_resource type="Texture2D" uid="uid://c6ueetsqvl38n" path="res://assety/tilesety/grounds_and_walls/grounds.png" id="3_yvbnq"]
 [ext_resource type="Texture2D" uid="uid://dnitu4xqyhb1r" path="res://assety/tilesety/grounds_and_walls/walls.png" id="4_ybg1e"]
 [ext_resource type="Texture2D" uid="uid://cct80vnw1ik0s" path="res://assety/tilesety/grounds_and_walls/surground.png" id="5_m55ny"]
 [ext_resource type="Script" uid="uid://bvsv3rndvk8dg" path="res://kodik/postac.gd" id="5_ybg1e"]
 [ext_resource type="Texture2D" uid="uid://cqqvlqqjcrsy" path="res://assety/tilesety/props/minecart_and_rails.png" id="6_fdwem"]
 [ext_resource type="Texture2D" uid="uid://c4b0kelnienk6" path="res://assety/tilesety/props/props.png" id="7_oxnlj"]
-[ext_resource type="PackedScene" uid="uid://c45e483tnoq57" path="res://sceny/gui.tscn" id="8_oxnlj"]
-[ext_resource type="PackedScene" uid="uid://vau2wgjr0e4l" path="res://sceny/hp_collectible.tscn" id="10_7e6us"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m55ny"]
 texture = ExtResource("3_yvbnq")
@@ -1021,7 +1026,6 @@ z_index = 1
 position = Vector2(-113.00006, 30)
 scale = Vector2(0.9999998, 0.9999998)
 script = ExtResource("5_ybg1e")
-inv = ExtResource("3_6avht")
 speed = 180
 flash_distance = -100.0
 
@@ -1044,6 +1048,3 @@ position = Vector2(-874, -233)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_oxnlj")
-
-[node name="hp_collectible" parent="." instance=ExtResource("10_7e6us")]
-position = Vector2(143, 35)
