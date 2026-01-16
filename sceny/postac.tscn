@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-[gd_scene load_steps=15 format=3 uid="uid://b2awxj46dyaxv"]
-=======
-[gd_scene load_steps=13 format=3 uid="uid://b2awxj46dyaxv"]
->>>>>>> 4f332d45f138041a7df7e8008c6c4bec0623988d
+[gd_scene load_steps=14 format=3 uid="uid://e2wfdxkr2cjp"]
 
 [ext_resource type="Texture2D" uid="uid://vbyawnx0xstu" path="res://assety/tilesety/postka_tile.png" id="1_2q5xm"]
 [ext_resource type="PackedScene" uid="uid://cqtpo01djkans" path="res://sceny/hud.tscn" id="2_64osm"]

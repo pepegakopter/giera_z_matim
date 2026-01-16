@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://mtka4yr4uhqk"]
 
-[ext_resource type="Texture2D" uid="uid://lnnwcuy5fc8x" path="res://test.png" id="1_f50pn"]
-[ext_resource type="PackedScene" uid="uid://cqtpo01djkans" path="res://hud.tscn" id="2_ij6vw"]
+[ext_resource type="Texture2D" uid="uid://lnnwcuy5fc8x" path="res://assety/img/test.png" id="1_f50pn"]
+[ext_resource type="PackedScene" uid="uid://cqtpo01djkans" path="res://sceny/hud.tscn" id="2_ij6vw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ij6vw"]
 
