@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cu82grqwb5jwd"]
 
-[ext_resource type="Script" path="res://kodik/settings.gd" id="1_x2hje"]
+[ext_resource type="Script" uid="uid://cqc2efd2suhlj" path="res://kodik/settings.gd" id="1_x2hje"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_x2hje"]
 keycode = 4194305
