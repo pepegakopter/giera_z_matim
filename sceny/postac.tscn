@@ -89,8 +89,8 @@ anchor_right = 0.647
 anchor_bottom = 0.64400005
 offset_left = -1242.24
 offset_top = -695.5201
-offset_right = 0.76000977
-offset_bottom = -0.020080566
+offset_right = -282.24
+offset_bottom = -156.52008
 scale = Vector2(2, 2)
 
 [node name="Camera2D" type="Camera2D" parent="."]
