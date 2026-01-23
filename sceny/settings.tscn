@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://cu82grqwb5jwd"]
+[gd_scene load_steps=5 format=3 uid="uid://cu82grqwb5jwd"]
 
-[ext_resource type="Script" path="res://kodik/settings.gd" id="1_x2hje"]
+[ext_resource type="Script" uid="uid://cqc2efd2suhlj" path="res://kodik/settings.gd" id="1_x2hje"]
+[ext_resource type="FontFile" uid="uid://cr67o6177xope" path="res://PixelifySans-VariableFont_wght.ttf" id="2_3gbkp"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_x2hje"]
 keycode = 4194305
@@ -29,6 +30,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+theme_override_fonts/font = ExtResource("2_3gbkp")
 shortcut = SubResource("Shortcut_nkug2")
 text = "<"
 
@@ -45,11 +47,15 @@ size_flags_vertical = 3
 
 [node name="volume_label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3gbkp")
+theme_override_font_sizes/font_size = 40
 text = "Volume"
 
 [node name="VolumeNumber" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 10
+theme_override_fonts/font = ExtResource("2_3gbkp")
+theme_override_font_sizes/font_size = 40
 horizontal_alignment = 2
 
 [node name="volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
@@ -57,11 +63,15 @@ layout_mode = 2
 
 [node name="window_mode" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3gbkp")
+theme_override_font_sizes/font_size = 40
 text = "Window mode"
 
 [node name="window" type="OptionButton" parent="MarginContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3gbkp")
+theme_override_font_sizes/font_size = 40
 selected = 0
 item_count = 3
 popup/item_0/text = "Borderless Fullscreen"
@@ -73,16 +83,20 @@ popup/item_2/id = 2
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 6
+size_flags_vertical = 4
 
 [node name="CRT_label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
 size_flags_horizontal = 2
+theme_override_fonts/font = ExtResource("2_3gbkp")
+theme_override_font_sizes/font_size = 40
 text = "CRT Effect"
 horizontal_alignment = 2
 
 [node name="toggleCRT" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_3gbkp")
+theme_override_font_sizes/font_size = 40
 button_pressed = true
 
 [connection signal="pressed" from="MarginContainer/GoBack" to="." method="_on_go_back_pressed"]

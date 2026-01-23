@@ -73,6 +73,7 @@ alignment = 1
 
 [node name="Label" type="Label" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
 theme_override_colors/font_color = Color(0.20871013, 0.20871016, 0.20871013, 1)
 theme_override_fonts/font = ExtResource("4_p81d2")
 theme_override_font_sizes/font_size = 70
@@ -93,6 +94,8 @@ flat = true
 [node name="Settings" type="Button" parent="MarginContainer/VBoxContainer"]
 texture_filter = 1
 layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
 theme_override_colors/font_color = Color(0.32915837, 0.3291584, 0.3291584, 1)
 theme_override_colors/font_focus_color = Color(0.4117647, 0, 0, 1)
 theme_override_colors/font_hover_color = Color(0.41032708, 5.8358535e-07, 1.4439226e-07, 1)

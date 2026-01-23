@@ -1,0 +1,159 @@
+[gd_scene load_steps=6 format=3 uid="uid://ca7rbwdm8vgpj"]
+
+[ext_resource type="Script" uid="uid://dv8rdkllrvygl" path="res://kodik/settings_menu.gd" id="1_27iqq"]
+[ext_resource type="Shader" uid="uid://cf3w5ow0t57xb" path="res://kodik/pause_menu.gdshader" id="1_blfek"]
+[ext_resource type="Texture2D" uid="uid://boprchl1f7e31" path="res://assety/img/kartka_2test.png" id="2_27iqq"]
+[ext_resource type="FontFile" uid="uid://cr67o6177xope" path="res://PixelifySans-VariableFont_wght.ttf" id="3_06c12"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_2a12r"]
+shader = ExtResource("1_blfek")
+shader_parameter/amount = 1.034000049115
+
+[node name="SettingsMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_27iqq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+material = SubResource("ShaderMaterial_2a12r")
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -2655.0
+offset_top = -1572.5
+offset_right = 2655.0
+offset_bottom = 1572.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.9981161, 0.9993641)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -248.0
+offset_top = -270.5455
+offset_right = 248.0
+offset_bottom = 270.5455
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_27iqq")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -122.0
+offset_top = -142.5
+offset_right = 122.0
+offset_bottom = 142.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="back" type="Button" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
+theme_override_colors/font_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+theme_override_fonts/font = ExtResource("3_06c12")
+theme_override_font_sizes/font_size = 22
+text = "<"
+flat = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="volume_label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+theme_override_fonts/font = ExtResource("3_06c12")
+theme_override_font_sizes/font_size = 22
+text = "Volume"
+
+[node name="VolumeNumber" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 10
+theme_override_colors/font_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+theme_override_fonts/font = ExtResource("3_06c12")
+theme_override_font_sizes/font_size = 22
+horizontal_alignment = 2
+
+[node name="volume" type="HSlider" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="window_mode" type="Label" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_colors/font_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+theme_override_fonts/font = ExtResource("3_06c12")
+theme_override_font_sizes/font_size = 22
+text = "Window mode"
+
+[node name="window" type="OptionButton" parent="MarginContainer/VBoxContainer"]
+texture_filter = 1
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_fonts/font = ExtResource("3_06c12")
+theme_override_font_sizes/font_size = 22
+selected = 0
+item_count = 3
+popup/item_0/text = "Borderless Fullscreen"
+popup/item_0/id = 0
+popup/item_1/text = "Fullscreen"
+popup/item_1/id = 1
+popup/item_2/text = "Windowed"
+popup/item_2/id = 2
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 8
+
+[node name="CRT_label" type="Label" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+size_flags_horizontal = 2
+theme_override_colors/font_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+theme_override_fonts/font = ExtResource("3_06c12")
+theme_override_font_sizes/font_size = 22
+text = "CRT Effect"
+horizontal_alignment = 2
+
+[node name="toggleCRT" type="CheckBox" parent="MarginContainer/VBoxContainer/HBoxContainer2"]
+texture_filter = 1
+layout_mode = 2
+theme_override_colors/font_color = Color(0.23392546, 0.23392546, 0.23392543, 1)
+theme_override_fonts/font = ExtResource("3_06c12")
+theme_override_font_sizes/font_size = 22
+button_pressed = true
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/back" to="." method="_on_back_pressed"]
+[connection signal="value_changed" from="MarginContainer/VBoxContainer/volume" to="." method="_on_volume_value_changed"]
+[connection signal="item_selected" from="MarginContainer/VBoxContainer/window" to="." method="_on_window_item_selected"]
