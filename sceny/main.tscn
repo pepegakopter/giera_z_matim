@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=4 uid="uid://bmbc5kdprod06"]
 
-[ext_resource type="PackedScene" path="res://sceny/postac.tscn" id="1_yvbnq"]
+[ext_resource type="PackedScene" uid="uid://e2wfdxkr2cjp" path="res://sceny/postac.tscn" id="1_yvbnq"]
 [ext_resource type="Texture2D" uid="uid://c6ueetsqvl38n" path="res://assety/tilesety/grounds_and_walls/grounds.png" id="3_yvbnq"]
 [ext_resource type="Texture2D" uid="uid://dnitu4xqyhb1r" path="res://assety/tilesety/grounds_and_walls/walls.png" id="4_ybg1e"]
 [ext_resource type="Texture2D" uid="uid://cct80vnw1ik0s" path="res://assety/tilesety/grounds_and_walls/surground.png" id="5_m55ny"]

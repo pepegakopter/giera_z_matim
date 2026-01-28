@@ -1,7 +1,7 @@
 extends CharacterBody2D
 class_name Postka
 
-@export var speed = 100
+@export var speed = 150
 @export var HP = 10
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 

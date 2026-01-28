@@ -12,9 +12,77 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_2knq8")
 
-[node name="InventorySlot" type="PanelContainer" parent="."]
+[node name="HelmSlot" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(32, 32)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 245.0
+offset_top = 39.0
+offset_right = 285.0
+offset_bottom = 79.0
 script = ExtResource("2_aux0l")
 metadata/_custom_type_script = "uid://crxqg7stvde0"
+
+[node name="KlataSlot" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 247.0
+offset_top = 95.0
+offset_right = 287.0
+offset_bottom = 135.0
+script = ExtResource("2_aux0l")
+type = 2
+metadata/_custom_type_script = "uid://crxqg7stvde0"
+
+[node name="NogiSlot" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 251.0
+offset_top = 152.0
+offset_right = 291.0
+offset_bottom = 192.0
+script = ExtResource("2_aux0l")
+type = 2
+metadata/_custom_type_script = "uid://crxqg7stvde0"
+
+[node name="BronSlot" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 185.0
+offset_top = 73.0
+offset_right = 225.0
+offset_bottom = 113.0
+script = ExtResource("2_aux0l")
+type = 4
+metadata/_custom_type_script = "uid://crxqg7stvde0"
+
+[node name="AccesorrySlot" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 320.0
+offset_top = 75.0
+offset_right = 360.0
+offset_bottom = 115.0
+script = ExtResource("2_aux0l")
+type = 5
+metadata/_custom_type_script = "uid://crxqg7stvde0"
+
+[node name="ButySlot" type="PanelContainer" parent="."]
+custom_minimum_size = Vector2(32, 32)
+layout_mode = 0
+offset_left = 258.0
+offset_top = 207.0
+offset_right = 298.0
+offset_bottom = 247.0
+script = ExtResource("2_aux0l")
+type = 2
+metadata/_custom_type_script = "uid://crxqg7stvde0"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 57.0
+offset_right = 890.0
+offset_bottom = 276.0
+theme_override_constants/h_separation = 16
+theme_override_constants/v_separation = 16
+columns = 6

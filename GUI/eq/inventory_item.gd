@@ -1,11 +1,33 @@
-extends Node
+class_name InventoryItem
+extends TextureRect
 
+@export var data: ItemData
 
-# Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	if data:
+		expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+		stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+		texture = data.item_texture
+		tooltip_text = "%s\n%s\nStaty: %s Damagae, %s Def" % [data.item_name, data.item_description, data.item_damage, data.item_defense]
+		
+func init(d: ItemData) -> void:
+	data = d
+	
+func _get_drag_data(at_position: Vector2) -> Variant:
+	set_drag_preview(make_drag_preview(at_position))
+	return self
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func make_drag_preview(at_position: Vector2) -> Control:
+	var t := TextureRect.new()
+	t.texture = texture
+	t.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	t.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	t.custom_minimum_size = size
+	t.modulate.a = 0.5
+	t.position = Vector2(-at_position)
+	
+	var c := Control.new()
+	c.add_child(t)
+	
+	return c
