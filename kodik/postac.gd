@@ -10,8 +10,9 @@ var flash_cooldown := 0.0
 var can_flash := true
 
 func _process(delta):
-	if Input.is_action_just_pressed("dash") and can_flash:
-		perform_flash()
+	if Engine.time_scale != 0:
+		if Input.is_action_just_pressed("dash") and can_flash:
+			perform_flash()
 
 
 func perform_flash():
