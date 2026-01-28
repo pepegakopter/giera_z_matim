@@ -41,13 +41,13 @@ func _on_esc_press():
 		settingMenu.hide()
 
 func toggleSettings():
-	if settingShown:
-		pauseMenu()
-		settingMenu.hide()
-		Engine.time_scale = 1
-	else:
+	if !settingShown:
 		pauseMenu()
 		settingMenu.show()
+		Engine.time_scale = 0
+	else:
+		pauseMenu()
+		settingMenu.hide()
 	settingShown = !settingShown
 
 func update_hearts():
