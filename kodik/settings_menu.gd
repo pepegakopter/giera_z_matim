@@ -1,20 +1,21 @@
 extends Control
 
-@onready var windowOptions = $MarginContainer/VBoxContainer/window
-@onready var volumeRange = $MarginContainer/VBoxContainer/volume
+@onready var hud = $".."
 @onready var volumeNumber = $MarginContainer/VBoxContainer/HBoxContainer/VolumeNumber
-
-
+@onready var volumeRange = $MarginContainer/VBoxContainer/volume
+@onready var windowOptions = $MarginContainer/VBoxContainer/window
 
 func _ready() -> void:
 	windowOptions.selected = Global.selected_window_mode
 	volumeRange.value = Global.volume
 	volumeNumber.text = str(int(Global.volume))
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	pass
+	if Input.is_action_just_pressed("pause_menu"):
+		hud._on_esc_press()
 
+func _on_back_pressed() -> void:
+	hud.toggleSettings() # Replace with function body.
 
 func _on_volume_value_changed(value: float) -> void:
 	AudioServer.set_bus_volume_db(0, value)
@@ -32,6 +33,3 @@ func _on_window_item_selected(index: int) -> void:
 		2:
 			DisplayServer.window_set_mode(DisplayServer.WINDOW_MODE_WINDOWED)
 			Global.selected_window_mode = 2
-
-func _on_go_back_pressed() -> void:
-	Global.go_back()
