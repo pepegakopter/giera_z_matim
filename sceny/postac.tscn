@@ -66,11 +66,7 @@ radius = 5.0
 height = 12.0
 
 [node name="postka" type="CharacterBody2D"]
-<<<<<<< HEAD
-z_index = 1
-=======
 z_index = 3
->>>>>>> 6c1d3f395b8d8c5d2f748d58e95f4aa663ec9bed
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(0.937501, 1.6875008)
