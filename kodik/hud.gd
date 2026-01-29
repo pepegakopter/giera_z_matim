@@ -1,5 +1,7 @@
 extends Control
 
+@onready var passives = $Passives
+
 @onready var hearts = [$serce1, $serce2, $serce3, $serce4]
 @onready var pause_menu = $PauseMenu
 @onready var settingMenu = $SettingsMenu
@@ -14,6 +16,12 @@ func _ready():
 	update_hearts()
 
 func _process(_delta: float) -> void:
+	if passives.windowHidden == false:
+		return
+	
+	
+	if Input.is_action_just_pressed("test_passives"):
+		passives.toggleWindow()
 	if Input.is_action_just_pressed("k"):
 		health = max(-1, health - 0.5)
 		if health >= 0:
@@ -25,6 +33,8 @@ func _process(_delta: float) -> void:
 		pauseMenu()
 		
 func pauseMenu():
+
+		
 	if paused:
 		pause_menu.hide()
 		Engine.time_scale = 1

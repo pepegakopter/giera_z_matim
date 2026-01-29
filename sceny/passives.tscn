@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://vqo4b2bh2a3l"]
+
+[ext_resource type="Texture2D" uid="uid://btnxcey5q8bpf" path="res://assety/img/passivesWindow.png" id="1_8ew5u"]
+[ext_resource type="Script" uid="uid://dtqucrmxoeu75" path="res://kodik/passives.gd" id="1_wsp7b"]
+
+[node name="Passives" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wsp7b")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -313.5
+offset_top = -313.5
+offset_right = 313.5
+offset_bottom = 313.5
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8ew5u")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -279.0
+offset_top = -143.0
+offset_right = 285.0
+offset_bottom = 141.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="o1" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 7
+
+[node name="o2" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 7
+
+[node name="o3" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 7
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/o1" to="." method="_on_o_1_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/o2" to="." method="_on_o_2_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/o3" to="." method="_on_o_3_pressed"]
