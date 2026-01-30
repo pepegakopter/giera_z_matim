@@ -48,6 +48,9 @@ func extractData(option: String):
 	var buffName = str(optionArray[0]) # np. "Attack Speed"
 	print(buffToGive)
 	print(buffName)
+	if buffName.trim_suffix(" ") == "Attack Speed":
+		Global.attackSpeed = Global.attackSpeed + (Global.attackSpeed*buffToGive)
+	print(Global.attackSpeed)
 
 func _on_o_1_pressed() -> void:
 	toggleWindow()

@@ -3,6 +3,8 @@ extends Node
 var selected_window_mode = 0
 var volume = 100
 
+var attackSpeed = 0.25
+
 var prevscene = ""
 func change_scene(path):
 	if get_tree().current_scene:
