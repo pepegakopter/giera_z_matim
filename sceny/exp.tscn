@@ -1,7 +1,14 @@
+<<<<<<< HEAD
 [gd_scene load_steps=4 format=3 uid="uid://du8ttquwxys54"]
 
 [ext_resource type="Texture2D" uid="uid://dkyve2tnfk8xl" path="res://assety/img/inv_tlo.png" id="1_3ck3g"]
 [ext_resource type="Script" uid="uid://baq87q2vaopky" path="res://kodik/exp.gd" id="1_41stu"]
+=======
+[gd_scene load_steps=4 format=3 uid="uid://c70vwpnt4vfnf"]
+
+[ext_resource type="Texture2D" uid="uid://dkyve2tnfk8xl" path="res://assety/img/inv_tlo.png" id="1_3ck3g"]
+[ext_resource type="Script" path="res://kodik/exp.gd" id="1_41stu"]
+>>>>>>> main
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ck3g"]
 radius = 3.0
