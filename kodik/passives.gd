@@ -1,4 +1,8 @@
 extends Control
+<<<<<<< HEAD
+=======
+
+>>>>>>> main
 class_name Pasywy
 
 @onready var window = $"."
