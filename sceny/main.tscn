@@ -7,7 +7,7 @@
 [ext_resource type="Script" uid="uid://bvsv3rndvk8dg" path="res://kodik/postac.gd" id="5_ybg1e"]
 [ext_resource type="Texture2D" uid="uid://cqqvlqqjcrsy" path="res://assety/tilesety/props/minecart_and_rails.png" id="6_fdwem"]
 [ext_resource type="Texture2D" uid="uid://c4b0kelnienk6" path="res://assety/tilesety/props/props.png" id="7_oxnlj"]
-[ext_resource type="PackedScene" uid="uid://du8ttquwxys54" path="res://sceny/exp.tscn" id="8_oxnlj"]
+[ext_resource type="PackedScene" path="res://sceny/exp.tscn" id="8_oxnlj"]
 [ext_resource type="PackedScene" uid="uid://blxcsh8u3hlsl" path="res://sceny/enemy.tscn" id="9_6avht"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m55ny"]
