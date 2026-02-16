@@ -1,15 +1,25 @@
-[gd_scene load_steps=3 format=3 uid="uid://blxcsh8u3hlsl"]
+[gd_scene load_steps=5 format=3 uid="uid://blxcsh8u3hlsl"]
 
-[ext_resource type="Texture2D" uid="uid://bcikw2hpm3fij" path="res://assety/img/place_holder_enem.png" id="1_kha5q"]
+[ext_resource type="Script" uid="uid://h43f0i1a6r1q" path="res://kodik/enemy.gd" id="1_gfh58"]
+[ext_resource type="Texture2D" uid="uid://2yygiakp26b2" path="res://assety/img/kriper.png" id="1_kha5q"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_gfh58"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_gfh58"]
+radius = 8.0
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_eydrx"]
+radius = 91.02197
+
+[node name="enemy" type="CharacterBody2D"]
+script = ExtResource("1_gfh58")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CapsuleShape2D_gfh58")
+shape = SubResource("CircleShape2D_gfh58")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(2.3841858e-07, 1.5)
-scale = Vector2(1.75, 1.9375)
 texture = ExtResource("1_kha5q")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_eydrx")
+debug_color = Color(0.93243736, 0.13748649, 0.55263346, 0.41960785)

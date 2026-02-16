@@ -1,6 +1,7 @@
 extends CharacterBody2D
 class_name Postka
 
+@export var expik = 0
 @export var speed = 150
 @export var HP = 10
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
@@ -8,6 +9,11 @@ class_name Postka
 @export var flash_distance := 100.0
 var flash_cooldown := 0.0
 var can_flash := true
+
+# robie funkcje expa do pasyw
+func zbieranie_exp():
+	pass
+
 
 func _process(delta):
 	if Engine.time_scale != 0:

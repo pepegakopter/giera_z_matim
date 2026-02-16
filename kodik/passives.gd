@@ -1,5 +1,5 @@
 extends Control
-
+class_name Pasywy
 
 @onready var window = $"."
 @onready var hud = $".."
@@ -14,11 +14,14 @@ var windowHidden = true
 func _ready() -> void:
 	window.hide()
 
+
+# losowanie pasywy
 func rollPassives():
 	var optionsList = [option1, option2, option3]
 	var passivesListCopy = passivesList.duplicate()
 	passivesListCopy.shuffle()
 	
+	# czcionka efekty
 	for i in range(optionsList.size()):
 		optionsList[i].remove_theme_color_override("font_color")
 		var percent = randi_range(3,20)
@@ -32,6 +35,7 @@ func rollPassives():
 			optionsList[i].add_theme_color_override("font_color", Color.DODGER_BLUE)
 			
 
+# obsluga wyswietlania okna
 func toggleWindow():
 	if windowHidden:
 		window.show()
@@ -41,6 +45,7 @@ func toggleWindow():
 		window.hide()
 		Engine.time_scale = 1
 	windowHidden = !windowHidden
+
 
 func extractData(option: String):
 	var optionArray = option.split("-")
