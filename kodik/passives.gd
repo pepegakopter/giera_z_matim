@@ -1,5 +1,6 @@
 extends Control
 
+class_name Pasywy
 
 @onready var window = $"."
 @onready var hud = $".."
