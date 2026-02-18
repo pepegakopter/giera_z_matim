@@ -11,7 +11,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	if Input.is_action_pressed("shoot"):
 		$CPUParticles2D.emitting = true
-		$CPUParticles2D.speed_scale = Global.attackSpeed
+		$CPUParticles2D.speed_scale = Global.playerStats["AttackSpeed"]
 	if Input.is_action_just_released("shoot"):
 		$CPUParticles2D.emitting = false
 		
