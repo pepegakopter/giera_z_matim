@@ -1035,5 +1035,32 @@ position = Vector2(-874, -233)
 position = Vector2(1, 0)
 shape = SubResource("RectangleShape2D_oxnlj")
 
+[node name="enemy6" parent="." instance=ExtResource("9_6avht")]
+position = Vector2(-732, -558)
+
+[node name="enemy7" parent="." instance=ExtResource("9_6avht")]
+position = Vector2(-351, -479)
+
+[node name="enemy5" parent="." instance=ExtResource("9_6avht")]
+position = Vector2(30, -400)
+
+[node name="enemy4" parent="." instance=ExtResource("9_6avht")]
+position = Vector2(-376, -323)
+
+[node name="enemy3" parent="." instance=ExtResource("9_6avht")]
+position = Vector2(-537, -459)
+
+[node name="enemy8" parent="." instance=ExtResource("9_6avht")]
+position = Vector2(-39, -591)
+
+[node name="enemy9" parent="." instance=ExtResource("9_6avht")]
+position = Vector2(-715, -666)
+
+[node name="enemy10" parent="." instance=ExtResource("9_6avht")]
+position = Vector2(-246, -628)
+
+[node name="enemy2" parent="." instance=ExtResource("9_6avht")]
+position = Vector2(-213, -353)
+
 [node name="enemy" parent="." instance=ExtResource("9_6avht")]
 position = Vector2(207, 37)

@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Enemy
 
 @export var hp: float = 50
-@export var move_speed: float = 50.67
+@export var move_speed: float = 50
 
 @onready var postka: Postka = $"../postka"
 

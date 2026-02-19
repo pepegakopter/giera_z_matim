@@ -2,7 +2,7 @@ extends CharacterBody2D
 class_name Postka
 
 @export var expik = 0
-@export var speed = 150
+@export var speed = Global.baseStats["movement_speed"]
 @export var HP = 10
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -16,6 +16,7 @@ func zbieranie_exp():
 
 
 func _process(delta):
+	get_input()
 	if Engine.time_scale != 0:
 		if Input.is_action_just_pressed("dash") and can_flash:
 			perform_flash()
@@ -60,11 +61,11 @@ func player():
 
 func get_input():
 	var input_direction = Input.get_vector("left", "right", "up", "down")
-	velocity = input_direction * speed
+	velocity = input_direction * (speed+(Global.bonusStats["movement_speed"] * 100))
 	
 
 func _physics_process(delta):
-	get_input()
+	
 	move_and_slide()
 
 	

@@ -3,14 +3,22 @@ extends Node
 var selected_window_mode = 0
 var volume = 100
 
+var baseStats: Dictionary = {
+	"movement_speed": 150,
+	"attack_speed": 0.2,
+	"projectile_speed": 0.2,
+	"chance_to_block_an_attack": 0,
+	"xp_multiplier": 1,
+	"chance_for_double_projectile": 0
+}
 
-var playerStats = {
-	"MovementSpeed": 20,
-	"AttackSpeed": 0.25,
-	"ProjectileSpeed": 20,
-	"Chancetoblockanattack": 0.2,
-	"XPMultiplier": 1,
-	"Chancefordoubleprojectile":0.3
+var bonusStats: Dictionary = {
+	"movement_speed": 0,
+	"attack_speed": 0,
+	"projectile_speed": 0,
+	"chance_to_block_an_attack": 0,
+	"xp_multiplier": 0,
+	"chance_for_double_projectile":0
 }
 
 
